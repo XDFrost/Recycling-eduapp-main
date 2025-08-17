@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Recycling EduApp",
-    "slug": "recycling-eduapp",
+    "slug": "recyclingeduapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork.recycling-eduapp",
+      "bundleIdentifier": "app.rork.recyclingeduapp",
       "infoPlist": {
         "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
         "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone",
@@ -33,7 +33,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "app.rork.recycling-eduapp",
+      "package": "app.rork.recyclingeduapp",
       "permissions": [
         "CAMERA",
         "RECORD_AUDIO",
@@ -75,11 +75,11 @@
       [
         "expo-notifications",
         {
-          "icon": "./local/assets/notification_icon.png",
+          "icon": "./assets/notification_icon.png",
           "color": "#ffffff",
           "defaultChannel": "default",
           "sounds": [
-            "./local/assets/notification_sound.wav"
+            "./assets/notification_sound.wav"
           ],
           "enableBackgroundRemoteNotifications": false
         }
