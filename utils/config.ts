@@ -2,12 +2,12 @@
 export const CONFIG = {
   // ML Model Configuration
   ML_MODEL: {
-    BASE_URL: "http://192.168.1.70:8000",
+    BASE_URL: process.env.API_URL,
     // Use your computer's local IP address instead of localhost
     // Find this by running 'ipconfig' on Windows or 'ifconfig' on Mac/Linux
     // URL: "http://10.22.209.65:8000/predict", // Your actual IP address
-    URL: "http://192.168.1.70:8000/predict", // Your actual IP address
-    HEALTH_CHECK_URL: "http://192.168.1.70:8000/health", // Optional health check endpoint
+    URL: `${process.env.API_URL}/predict`, // Your actual IP address
+    HEALTH_CHECK_URL: `${process.env.API_URL}/health`, // Optional health check endpoint
     TIMEOUT: 30000, // 30 seconds timeout
     USE_FIRST: true, // Now enabled - ML model supports JSON with base64!
     FALLBACK_TO_AI: true, // Whether to fallback to AI service if ML model fails
@@ -35,7 +35,7 @@ export const getConfig = () => {
   if (__DEV__) {
     // Development environment - try multiple IP addresses
     const possibleIPs = [
-      "http://192.168.1.70:8000", // Your actual IP address
+      process.env.API_URL || "", // Your actual IP address
       "http://10.22.209.65:8000", 
       "http://10.0.0.100:8000",   // Common router IP
       "http://172.16.0.100:8000", // Common local network IP
